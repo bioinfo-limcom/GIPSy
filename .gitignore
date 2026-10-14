@@ -1,0 +1,9 @@
+# GIPSy generated runtime files
+temp_files/
+results/
+*.log
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+*.bak
