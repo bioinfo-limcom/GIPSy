@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="docs/images/image_01.png" alt="GIPSy Logo" width="380">
 </p>
@@ -45,7 +46,7 @@
 
 ## 🔬 Overview & Biological Relevance
 
-Bacteria exhibit remarkable adaptability to diverse clinical environments, antibiotic selective pressures, and host immune defenses. Much of this evolutionary plasticity is driven by **Horizontal Gene Transfer (HGT)**, whereby large segments of DNA (typically 10 to >100 kb)—termed **Genomic Islands (GEIs)**—are transferred between distinct bacterial lineages.
+Bacteria exhibit remarkable adaptability to diverse clinical environments, antibiotic selective pressures, and host immune defenses. Much of this evolutionary plasticity is driven by **Horizontal Gene Transfer (HGT)**, whereby large segments of DNA (typically 10 to >100 kb), termed **Genomic Islands (GEIs)**, are transferred between distinct bacterial lineages.
 
 Accurately mapping GEIs is critical for:
 
@@ -377,11 +378,8 @@ If you use GIPSy in your research or publications, please cite the original arti
 ### 👨‍💻 Original Developer
 
 - **Siomar de Castro Soares** — (`siomars@gmail.com` / `limcom.uftm@gmail.com`)
-  *Laboratório de Imunologia e Ciências Ômicas (LimCom)*
 
 ### 🛠️ Maintenance & GitHub Offline Edition
 
 - **Andrei Giacchetto Felice** — (`giacchetto97@gmail.com`)
 - **Siomar de Castro Soares** — (`siomars@gmail.com` / `limcom.uftm@gmail.com`)
-- *Laboratório de Imunologia e Ciências Ômicas (LimCom)*
-- *Universidade Federal do Triângulo Mineiro (UFTM), Uberaba - MG, Brasil.*
