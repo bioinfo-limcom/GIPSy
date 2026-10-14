@@ -126,9 +126,11 @@ If using EMBL format:
 ## 💻 System Requirements
 
 - **Operating System**: Windows 7, 8, 10, or 11 (64-bit).
-- **Java**: **Java 8 (JRE 1.8)**.
+- **Java**: **Java 8 (JRE 1.8)** *(Recommended)*.
+  - GIPSy was designed for Java 8 and **works best with Java 8**.
+  - In some cases, newer Java versions (such as Java 11, 17, 21, etc.) may freeze or hang during execution, although they will not necessarily freeze in every environment or setup.
+  - If you encounter unexpected freezes or issues, switching to Java 8 (JRE 1.8) is strongly recommended.
   - Check your version in CMD/PowerShell: `java -version`.
-  - If you have newer Java runtimes (Java 11, 17, 21), always launch the application using `run_gipsy.bat`, which binds directly to the Java 8 runtime.
 - **Hardware**: Minimum 4 GB RAM (8 GB recommended for reciprocal BLAST of large genomes).
 - **File System Rule**: **NO SPACES IN PATHS OR FILE NAMES** (see [Troubleshooting](#-troubleshooting--common-issues)).
 
@@ -144,7 +146,7 @@ Keep all repository files together in the same directory:
 ├── 📄 GIPSy.jar             # Main GIPSy application
 ├── 📦 DB.zip                # Curated databases (virulence, resistance, metabolic, tRNA, transposases)
 ├── 📦 Dependencies.zip      # Windows binaries (BLAST 2.2.26, Colombo 3.8/SIGI-HMM, HMMER 3.0)
-├── ⚙️ run_gipsy.bat         # Launcher script (ensures Java 8 and directory path)
+├── ⚙️ run_gipsy.bat         # Launcher script (prioritizes Java 8 and resolves directory path)
 ├── ⚙️ config.properties     # Path configuration template
 ├── 📁 docs/images/          # Visual documentation and formatting diagrams
 └── 📘 README.md             # This documentation
@@ -200,11 +202,11 @@ If you prefer to configure GIPSy manually without running the GUI installer:
 
 Always start GIPSy through one of these methods:
 
-1. **Using the Launcher (Best Practice)**:
+1. **Using the Launcher (Recommended)**:
    Double-click [run_gipsy.bat](file:///c:/Users/andre/Documents/UFTM/Projetos/Programas/GIPSy/run_gipsy.bat).
-   - This ensures the working directory is resolved correctly (`cd /d "%~dp0"`) and invokes the installed Java 8 JRE.
+   - Resolves the working directory cleanly (`cd /d "%~dp0"`), prioritizes Java 8 if installed, and falls back to your default Java runtime.
 2. **Direct JAR Execution**:
-   Double-click `GIPSy.jar` (requires `.jar` files to be associated with Java 8 `javaw.exe`).
+   Double-click `GIPSy.jar` (opens with your default system Java runtime).
 
 ---
 
@@ -346,11 +348,11 @@ flowchart TD
 - ❌ **Wrong**: `C:\Users\John Doe\Documents\GIPSy\Escherichia coli CFT073.gbk`
 - ✅ **Right**: `C:\Users\JohnDoe\GIPSy\Escherichia_coli_CFT073.gbk`
 
-### 2. Java Version Incompatibility (Java 11, 17, 21)
+### 2. Java Version Compatibility & Potential Freezes
 
-- **Symptom**: GIPSy crashes immediately upon startup or throws `NoClassDefFoundError` / `InaccessibleObjectException`.
-- **Cause**: GIPSy relies on Java 8 (JRE 1.8) APIs that were removed or restricted in Java 9+.
-- **Solution**: Install **Java 8 (JRE 1.8.0)** and launch the program using [run_gipsy.bat](file:///c:/Users/andre/Documents/UFTM/Projetos/Programas/GIPSy/run_gipsy.bat).
+- **Symptom**: GIPSy occasionally freezes, hangs on computational steps, or displays runtime warnings.
+- **Context**: GIPSy works best and was originally built for **Java 8 (JRE 1.8)**. In some cases, running under newer Java versions (Java 11, 17, 21, etc.) can cause the interface or underlying background processes to freeze or hang. However, it will not necessarily freeze in every case—many systems run without issues.
+- **Solution**: If you experience freezes or instability, install **Java 8 (JRE 1.8)** and launch GIPSy using [run_gipsy.bat](file:///c:/Users/andre/Documents/UFTM/Projetos/Programas/GIPSy/run_gipsy.bat).
 
 ### 3. Missing or Misconfigured `config.properties`
 
